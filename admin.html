@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Administration | Portfolio Alida</title>
+
+    <!-- Icônes -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS administration -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- BARRE LATÉRALE -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <h2>COMPRO<span>.</span></h2>
+            <small>Administration</small>
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <a href="#dashboard" class="active">
+                <i class="fas fa-chart-pie"></i>
+                Tableau de bord
+            </a>
+
+            <a href="#profil">
+                <i class="fas fa-user"></i>
+                Profil
+            </a>
+
+            <a href="#apropos">
+                <i class="fas fa-address-card"></i>
+                À propos
+            </a>
+
+            <a href="#competences">
+                <i class="fas fa-lightbulb"></i>
+                Compétences
+            </a>
+
+            <a href="#projets">
+                <i class="fas fa-folder-open"></i>
+                Réalisations
+            </a>
+
+            <a href="#experiences">
+                <i class="fas fa-briefcase"></i>
+                Expériences
+            </a>
+
+            <a href="#formations">
+                <i class="fas fa-graduation-cap"></i>
+                Formations
+            </a>
+
+            <a href="#contact">
+                <i class="fas fa-envelope"></i>
+                Contact
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="index.html" target="_blank">
+                <i class="fas fa-globe"></i>
+                Voir le portfolio
+            </a>
+        </div>
+
+    </aside>
+
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="main-content">
+
+        <!-- EN-TÊTE -->
+        <header class="topbar">
+
+            <div>
+                <h1>Tableau de bord</h1>
+                <p>Bienvenue dans votre espace d'administration.</p>
+            </div>
+
+            <div class="admin-profile">
+                <div class="admin-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+
+                <div>
+                    <strong>Administrateur</strong>
+                    <small>Gestion du portfolio</small>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- TABLEAU DE BORD -->
+        <section id="dashboard" class="admin-section">
+
+            <h2>Vue générale</h2>
+
+            <div class="stats-container">
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+
+                    <div>
+                        <h3 id="totalSkills">0</h3>
+                        <p>Compétences</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+
+                    <div>
+                        <h3 id="totalProjects">0</h3>
+                        <p>Réalisations</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+
+                    <div>
+                        <h3 id="totalExperiences">0</h3>
+                        <p>Expériences</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+
+                    <div>
+                        <h3 id="totalFormations">0</h3>
+                        <p>Formations</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROFIL -->
+        <section id="profil" class="admin-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Informations du profil</h2>
+                    <p>Modifier les informations principales du portfolio.</p>
+                </div>
+            </div>
+
+            <form id="profileForm" class="admin-form">
+
+                <div class="form-group">
+                    <label for="fullName">Nom complet</label>
+                    <input type="text" id="fullName"
+                           placeholder="Ex : Alida">
+                </div>
+
+                <div class="form-group">
+                    <label for="profession">Profession</label>
+                    <input type="text" id="profession"
+                           placeholder="Ex : Professionnelle de la communication">
+                </div>
+
+                <div class="form-group">
+                    <label for="profileDescription">Description principale</label>
+                    <textarea id="profileDescription" rows="4"
+                              placeholder="Présentez votre profil..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="profileImage">Chemin de la photo</label>
+                    <input type="text" id="profileImage"
+                           placeholder="images/profil.png">
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i>
+                    Enregistrer le profil
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- À PROPOS -->
+        <section id="apropos" class="admin-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>À propos</h2>
+                    <p>Modifier la présentation personnelle.</p>
+                </div>
+            </div>
+
+            <form id="aboutForm" class="admin-form">
+
+                <div class="form-group">
+                    <label for="aboutDescription">Présentation</label>
+                    <textarea id="aboutDescription" rows="6"
+                              placeholder="Présentez votre parcours et vos objectifs..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i>
+                    Enregistrer la présentation
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- COMPÉTENCES -->
+        <section id="competences" class="admin-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Gestion des compétences</h2>
+                    <p>Ajouter, modifier ou supprimer des compétences.</p>
+                </div>
+            </div>
+
+            <form id="skillForm" class="admin-form">
+
+                <input type="hidden" id="skillId">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="skillName">Nom de la compétence</label>
+                        <input type="text" id="skillName"
+                               placeholder="Ex : Marketing digital" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="skillLevel">Niveau (%)</label>
+                        <input type="number" id="skillLevel"
+                               min="0" max="100"
+                               placeholder="Ex : 85" required>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-plus"></i>
+                    Enregistrer la compétence
+                </button>
+
+            </form>
+
+            <div id="skillsList" class="data-list"></div>
+
+        </section>
+
+
+        <!-- RÉALISATIONS -->
+        <section id="projets" class="admin-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Gestion des réalisations</h2>
+                    <p>Gérer les projets présentés dans le portfolio.</p>
+                </div>
+            </div>
+
+            <form id="projectForm" class="admin-form">
+
+                <input type="hidden" id="projectId">
+
+                <div class="form-group">
+                    <label for="projectTitle">Titre du projet</label>
+                    <input type="text" id="projectTitle"
+                           placeholder="Ex : Campagne de communication" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="projectDescription">Description</label>
+                    <textarea id="projectDescription" rows="4"
+                              placeholder="Décrivez le projet..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="projectImage">Chemin de l'image</label>
+                    <input type="text" id="projectImage"
+                           placeholder="images/projet1.jpg">
+                </div>
+
+                <div class="form-group">
+                    <label for="projectLink">Lien du projet</label>
+                    <input type="url" id="projectLink"
+                           placeholder="https://...">
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-plus"></i>
+                    Enregistrer le projet
+                </button>
+
+            </form>
+
+            <div id="projectsList" class="data-list"></div>
+
+        </section>
+
+
+        <!-- EXPÉRIENCES -->
+        <section id="experiences" class="admin-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Expériences professionnelles</h2>
+                    <p>Ajouter les expériences professionnelles.</p>
+                </div>
+            </div>
+
+            <form id="experienceForm" class="admin-form">
+
+                <input type="hidden" id="experienceId">
+
+                <div class="form-group">
+                    <label for="experienceTitle">Poste occupé</label>
+                    <input type="text" id="experienceTitle"
+                           placeholder="Ex : Chargée de communication" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="experienceCompany">Entreprise ou organisation</label>
+                    <input type="text" id="experienceCompany"
+                           placeholder="Nom de l'organisation">
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="experienceStart">Date de début</label>
+                        <input type="text" id="experienceStart"
+                               placeholder="Ex : Janvier 2024">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experienceEnd">Date de fin</label>
+                        <input type="text" id="experienceEnd"
+                               placeholder="Ex : Juin 2024 ou Aujourd'hui">
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="experienceDescription">Description</label>
+                    <textarea id="experienceDescription" rows="4"
+                              placeholder="Décrivez les missions réalisées..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-plus"></i>
+                    Enregistrer l'expérience
+                </button>
+
+            </form>
+
+            <div id="experiencesList" class="data-list"></div>
+
+        </section>
+
+
+        <!-- FORMATIONS -->
+        <section id="formations" class="admin-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Formations</h2>
+                    <p>Gérer les formations et diplômes.</p>
+                </div>
+            </div>
+
+            <form id="formationForm" class="admin-form">
+
+                <input type="hidden" id="formationId">
+
+                <div class="form-group">
+                    <label for="formationTitle">Intitulé de la formation</label>
+                    <input type="text" id="formationTitle"
+                           placeholder="Ex : Licence en communication" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="formationSchool">Établissement</label>
+                    <input type="text" id="formationSchool"
+                           placeholder="Nom de l'établissement">
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="formationStart">Date de début</label>
+                        <input type="text" id="formationStart"
+                               placeholder="Ex : 2022">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="formationEnd">Date de fin</label>
+                        <input type="text" id="formationEnd"
+                               placeholder="Ex : 2025">
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-plus"></i>
+                    Enregistrer la formation
+                </button>
+
+            </form>
+
+            <div id="formationsList" class="data-list"></div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section id="contact" class="admin-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Coordonnées</h2>
+                    <p>Modifier les informations de contact.</p>
+                </div>
+            </div>
+
+            <form id="contactAdminForm" class="admin-form">
+
+                <div class="form-group">
+                    <label for="contactEmail">Adresse e-mail</label>
+                    <input type="email" id="contactEmail"
+                           placeholder="Ex : contact@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="contactPhone">Téléphone</label>
+                    <input type="text" id="contactPhone"
+                           placeholder="+229 ...">
+                </div>
+
+                <div class="form-group">
+                    <label for="contactAddress">Adresse</label>
+                    <input type="text" id="contactAddress"
+                           placeholder="Ex : Cotonou, Bénin">
+                </div>
+
+                <div class="form-group">
+                    <label for="linkedinLink">Lien LinkedIn</label>
+                    <input type="url" id="linkedinLink"
+                           placeholder="https://www.linkedin.com/...">
+                </div>
+
+                <div class="form-group">
+                    <label for="facebookLink">Lien Facebook</label>
+                    <input type="url" id="facebookLink"
+                           placeholder="https://www.facebook.com/...">
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i>
+                    Enregistrer les coordonnées
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- MESSAGE -->
+        <div id="adminMessage" class="admin-message"></div>
+
+        <footer class="admin-footer">
+            <p>© 2026 COMPRO. Administration du portfolio.</p>
+        </footer>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="admin.js"></script>
+
+</body>
+</html>

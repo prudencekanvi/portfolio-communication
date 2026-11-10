@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion Administrateur | Portfolio</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <h1>Administration</h1>
+            <p>Connectez-vous pour gérer votre portfolio.</p>
+
+            <form id="loginForm">
+
+                <div class="form-group">
+                    <label for="username">Identifiant</label>
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Votre identifiant"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Votre mot de passe"
+                        required
+                    >
+                </div>
+
+                <button type="submit">Se connecter</button>
+
+                <p id="loginMessage"></p>
+
+            </form>
+
+            <a href="index.html" class="back-link">
+                Retour au portfolio
+            </a>
+
+        </div>
+
+    </div>
+    <script src="login.js"></script>
+
+</body>
+</html>
